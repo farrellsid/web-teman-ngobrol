@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mulish:wght@400;600;700&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Teman Ngobrol warm orange palette */
+  --color-brand-cream:   #FFFBDC;
+  --color-brand-peach:   #FFD3A5;
+  --color-brand-sandy:   #FFAA6E;
+  --color-brand-primary: #FF8237;
+  --color-brand-deep:    #FF5900;
+
+  /* Typography */
+  --font-display: "Libre Baskerville", serif;
+  --font-body:    "Mulish", sans-serif;
+}
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+*/
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
+	--accent: #FF8237;        /* was #2337ff — swapped to brand primary */
+	--accent-dark: #FF5900;   /* was #000d8a — swapped to brand deep */
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -17,7 +35,7 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 body {
-	font-family: var(--font-atkinson);
+	font-family: var(--font-body);
 	margin: 0;
 	padding: 0;
 	text-align: left;

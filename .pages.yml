@@ -1,0 +1,50 @@
+content:
+  - name: articles
+    label: Articles
+    path: src/content/articles
+    type: collection
+    fields:
+      - { name: title,       label: Title,        type: string }
+      - { name: author,      label: Author,        type: string }
+      - { name: pubDate,     label: Publish Date,  type: date }
+      - { name: description, label: Description,   type: string }
+      - { name: heroImage,   label: Hero Image,    type: image }
+      - { name: draft,       label: Draft,         type: boolean }
+      - { name: tags,        label: Tags,          type: string, list: true }
+      - { name: body,        label: Content,       type: rich-text }
+
+  - name: guides
+    label: Country Guides
+    path: src/content/guides
+    type: collection
+    fields:
+      - { name: country,    label: Country,   type: string }
+      - { name: flagEmoji,  label: Flag,      type: string }
+      - { name: summary,    label: Summary,   type: string }
+      - { name: pubDate,    label: Date,      type: date }
+      - { name: draft,      label: Draft,     type: boolean }
+      - { name: body,       label: Content,   type: rich-text }
+
+  - name: events
+    label: Events
+    path: src/content/events
+    type: collection
+    fields:
+      - { name: title,     label: Title,      type: string }
+      - { name: eventDate, label: Event Date, type: date }
+      - { name: location,  label: Location,   type: string }
+      - { name: draft,     label: Draft,      type: boolean }
+      - { name: body,      label: Details,    type: rich-text }
+
+  - name: testimonials
+    label: Testimonials
+    path: src/content/testimonials
+    type: collection
+    fields:
+      - { name: name,   label: Name,   type: string }
+      - { name: cohort, label: Cohort, type: string }
+      - { name: quote,  label: Quote,  type: string }
+
+media:
+  input:  public/uploads
+  output: /uploads
