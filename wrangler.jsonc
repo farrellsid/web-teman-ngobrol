@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers — static-assets deploy for a static Astro site (no adapter).
+  // Deploy: `npx astro build && npx wrangler deploy`
+  // Local:  `npx astro build && npx wrangler dev`
+  "name": "web-teman-ngobrol",
+  "compatibility_date": "2026-06-18",
+  "assets": {
+    "directory": "./dist"
+  }
+}

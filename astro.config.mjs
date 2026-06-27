@@ -8,7 +8,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://teman-ngobrol.com',
+  output: 'static', // default; explicit — static build, no adapter (Cloudflare serves dist/)
   integrations: [mdx(), sitemap()],
 
   fonts: [

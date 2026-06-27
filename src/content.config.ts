@@ -4,17 +4,18 @@ import { z } from 'astro/zod';
 
 const articles = defineCollection({
   loader: glob({ base: './src/content/articles', pattern: '**/*.{md,mdx}' }),
-  schema: ({ image }) =>
-    z.object({
-      title:       z.string(),
-      description: z.string().optional(),
-      author:      z.string(),
-      pubDate:     z.coerce.date(),
-      updatedDate: z.coerce.date().optional(),
-      heroImage:   z.optional(image()),
-      draft:       z.boolean().default(false),
-      tags:        z.array(z.string()).optional(),
-    }),
+  schema: z.object({
+    title:       z.string(),
+    description: z.string().optional(),
+    author:      z.string(),
+    pubDate:     z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    // Pattern 1 (CMS-friendly): a public path string like "/uploads/cover.jpg" written by
+    // Pages CMS, or any URL. NOT optimized by sharp. See CLAUDE.md "Content authoring".
+    heroImage:   z.string().optional(),
+    draft:       z.boolean().default(false),
+    tags:        z.array(z.string()).optional(),
+  }),
 });
 
 const guides = defineCollection({
