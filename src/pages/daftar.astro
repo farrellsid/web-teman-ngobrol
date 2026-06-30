@@ -1,0 +1,18 @@
+---
+import site from '../data/site.json';
+const url = site.event.formUrl;
+---
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content={`0; url=${url}`} />
+    <link rel="canonical" href={url} />
+    <title>Mengalihkan ke formulir pendaftaran...</title>
+    <script is:inline set:html={`location.replace(${JSON.stringify(url)})`}></script>
+  </head>
+  <body style="font-family: 'Helvetica Neue', Arial, sans-serif; padding: 2rem;">
+    <p>Mengalihkan ke formulir pendaftaran. <a href={url}>Klik di sini</a> jika halaman tidak berpindah otomatis.</p>
+  </body>
+</html>
