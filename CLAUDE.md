@@ -60,6 +60,11 @@ Before feature work, confirm the live version with `npx astro --version` and che
 - The legacy `@astrojs/tailwind` integration is **Tailwind-3-only** — do not install it.
 - If you use `@apply` inside an Astro component `<style>` block, add
   `@reference "../styles/global.css"` to that block.
+- **Known gotcha (open):** `global.css` still includes the Astro starter's Bear Blog base
+  styles, notably `main { width: 720px }`, a gray `body` background gradient, and large
+  `h1`-`h6` sizes. These suit the article/prose pages but constrain the full-width homepage
+  (sections wrapped in `<main>` get pinned to 720px). Reconcile before treating the homepage
+  layout as done. See `docs/superpowers/notes/2026-06-30-homepage-known-issues.md`.
 
 ## Deployment — Cloudflare (static, no adapter)
 
