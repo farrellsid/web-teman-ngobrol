@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mulish:wght@400;600;700&display=swap');
-
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
   /* Teman Ngobrol warm orange palette */
-  --color-brand-cream:   #FFFBDC;
-  --color-brand-peach:   #FFD3A5;
-  --color-brand-sandy:   #FFAA6E;
-  --color-brand-primary: #FF8237;
-  --color-brand-deep:    #FF5900;
+  --color-brand-cream:     #FFFBDC;
+  --color-brand-peach:     #FFD3A5;
+  --color-brand-sandy:     #FFAA6E;
+  --color-brand-primary:   #FF8237;
+  --color-brand-deep:      #FF5900;
+  --color-brand-terracotta: #C0492B;
+  --color-brand-footer:    #7A2E12;
 
-  /* Typography */
-  --font-display: "Libre Baskerville", serif;
-  --font-body:    "Mulish", sans-serif;
+  /* Typography: match the Instagram posts (Helvetica/Arial) */
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body:    "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
