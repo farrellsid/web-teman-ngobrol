@@ -1,0 +1,18 @@
+---
+import site from '../../data/site.json';
+const { text, pillars } = site.about;
+---
+<section class="max-w-5xl mx-auto px-5 py-14 text-center">
+  <h2 class="font-display font-extrabold text-brand-terracotta text-3xl">Apa itu Teman Ngobrol?</h2>
+  <p class="text-brand-sandy tracking-[0.4em] my-3" aria-hidden="true">─── ◆ ───</p>
+  <p class="text-stone-600 max-w-2xl mx-auto">{text}</p>
+  <div class="mt-10 grid gap-5 sm:grid-cols-3">
+    {pillars.map((p) => (
+      <div class="bg-white rounded-2xl p-6 shadow-sm text-center">
+        <div class="w-12 h-12 rounded-full bg-brand-peach/50 mx-auto flex items-center justify-center text-2xl">{p.icon}</div>
+        <h3 class="font-display font-extrabold text-lg mt-3">{p.title}</h3>
+        <p class="text-sm text-stone-600 mt-1">{p.text}</p>
+      </div>
+    ))}
+  </div>
+</section>
