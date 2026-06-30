@@ -10,7 +10,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://teman-ngobrol.com',
   output: 'static', // default; explicit — static build, no adapter (Cloudflare serves dist/)
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/daftar') })],
 
   vite: {
     plugins: [tailwindcss()],
