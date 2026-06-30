@@ -1,0 +1,25 @@
+---
+import site from '../../data/site.json';
+const { name, date, description, posterImage } = site.event;
+---
+<section class="bg-gradient-to-b from-brand-cream to-brand-peach/40">
+  <div class="max-w-5xl mx-auto px-5 py-14 grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-center">
+    <div>
+      <span class="inline-block rounded-full bg-brand-peach text-brand-terracotta font-bold text-sm px-3 py-1">
+        Event mendatang · {date}
+      </span>
+      <h1 class="font-display font-extrabold text-brand-terracotta tracking-tight text-4xl sm:text-5xl mt-4 leading-[1.05]">
+        {name}
+      </h1>
+      <p class="mt-4 text-lg text-stone-700 max-w-prose">{description}</p>
+      <a href="/daftar"
+         class="inline-block mt-6 rounded-full bg-brand-deep text-white font-extrabold px-7 py-3 text-lg shadow-lg shadow-brand-deep/30 hover:bg-brand-primary">
+        Daftar Sekarang <span aria-hidden="true">&rsaquo;</span>
+      </a>
+    </div>
+    {posterImage && (
+      <img src={posterImage} alt={`Poster ${name}`} width="400" height="500"
+           class="rounded-2xl w-full object-cover shadow-md" />
+    )}
+  </div>
+</section>
