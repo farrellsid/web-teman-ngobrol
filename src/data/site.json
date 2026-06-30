@@ -1,0 +1,20 @@
+{
+  "announcementText": "[Nama event] telah dibuka. Daftar sekarang.",
+  "tagline": "Komunitas pelajar Indonesia.",
+  "instagramUrl": "https://instagram.com/",
+  "event": {
+    "name": "[Nama Event]",
+    "date": "[Tanggal]",
+    "description": "[Satu kalimat deskripsi event.]",
+    "formUrl": "https://forms.gle/REPLACE-WITH-REAL-FORM",
+    "posterImage": ""
+  },
+  "about": {
+    "text": "[Kalimat singkat tentang Teman Ngobrol.]",
+    "pillars": [
+      { "icon": "🎓", "title": "Info Kuliah LN", "text": "[Teks pilar pertama.]" },
+      { "icon": "💰", "title": "Panduan Beasiswa", "text": "[Teks pilar kedua.]" },
+      { "icon": "💬", "title": "Cerita dari Sesama", "text": "[Teks pilar ketiga.]" }
+    ]
+  }
+}

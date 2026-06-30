@@ -11,6 +11,37 @@ media:
   output: /uploads           # path written into frontmatter (public/ is the web root)
 
 content:
+  - name: settings
+    label: Pengaturan Situs
+    type: file
+    path: src/data/site.json
+    fields:
+      - { name: announcementText, label: Teks pengumuman, type: string }
+      - { name: tagline,          label: Tagline,         type: string }
+      - { name: instagramUrl,     label: Link Instagram,  type: string }
+      - name: event
+        label: Event
+        type: object
+        fields:
+          - { name: name,        label: Nama event,   type: string, required: true }
+          - { name: date,        label: Tanggal,      type: string }
+          - { name: description, label: Deskripsi,    type: text }
+          - { name: formUrl,     label: Link Google Form, type: string, required: true }
+          - { name: posterImage, label: Poster,       type: image }
+      - name: about
+        label: Tentang
+        type: object
+        fields:
+          - { name: text, label: Teks tentang, type: text }
+          - name: pillars
+            label: Pilar
+            type: object
+            list: true
+            fields:
+              - { name: icon,  label: Ikon (emoji), type: string }
+              - { name: title, label: Judul,        type: string }
+              - { name: text,  label: Teks,         type: text }
+
   - name: articles
     label: Articles
     type: collection
