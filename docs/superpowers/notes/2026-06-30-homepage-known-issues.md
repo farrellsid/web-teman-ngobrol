@@ -47,7 +47,28 @@ These base rules are correct for the article and blog pages (the `BlogPost` layo
 The component markup, brand tokens, the grids (`max-w-5xl`, `sm:grid-cols-3`), and the data
 wiring are all fine. This is base-CSS reconciliation, not a rebuild.
 
+## Resolved (2026-07-01, full distinctive redesign)
+
+All of the above were fixed in the redesign on `feat/homepage-event`:
+
+- The `main` clamp and the gray gradient no longer constrain the homepage. The Bear Blog
+  base is wrapped in `@layer base`, the homepage `<main>` uses `w-full max-w-none p-0`, and
+  the body background is cream. Article/about pages keep their reading styles.
+- A real type scale (Tailwind sizes) and a 4/8 spacing scale are used throughout.
+- Deliberate self-hosted type pairing: Bricolage Grotesque (display, echoes the logo) +
+  Hanken Grotesk (body), via the Astro fonts API.
+- Warm palette retuned for WCAG AA. The old white-on-`#FF5900` (which failed AA) is gone:
+  the announcement bar is terracotta on cream, and the CTA is ember with dark ink text.
+- De-slopped against the AI-slop checklist: no pill-above-H1, no identical icon cards
+  (replaced by a dot-led list), no colored-left-border quote cards, no CTA glow shadow, no
+  hero gradient, no backdrop-blur, no emoji icons. Signature: the terracotta/ember period
+  from the logo.
+
+Verified with `astro check` (0 errors), `npm run build`, and Playwright screenshots at
+desktop (1280) and mobile (390).
+
 ## Still pending (unchanged from the plan's open items)
 
 Real event content and the Google Form URL, the Instagram link, final humanized Indonesian
-copy, and a transparent or SVG logo.
+copy, and a transparent or SVG logo (the header PNG has heavy internal padding, so the
+wordmark renders small).

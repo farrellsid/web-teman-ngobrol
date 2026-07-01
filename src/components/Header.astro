@@ -3,17 +3,17 @@ import { Image } from 'astro:assets';
 import logo from '../assets/teman-ngobrol-logo.png';
 import site from '../data/site.json';
 ---
-<header class="border-b border-brand-peach/40 bg-brand-cream/80 backdrop-blur sticky top-0 z-20">
-  <nav class="max-w-5xl mx-auto flex items-center justify-between px-5 py-3">
+<header class="border-b border-brand-terracotta/15 bg-brand-cream">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
     <a href="/" class="block" aria-label="Teman Ngobrol beranda">
-      <Image src={logo} alt="Teman Ngobrol" width={150} height={150}
-             class="h-11 w-auto" style="mix-blend-mode: multiply;" />
+      <Image src={logo} alt="Teman Ngobrol" width={200} height={200}
+             class="h-14 w-auto" style="mix-blend-mode: multiply;" />
     </a>
-    <div class="flex items-center gap-5 text-sm font-semibold text-stone-600">
-      <a href="/about" class="hover:text-brand-terracotta">Tentang</a>
-      <a href="/articles" class="hover:text-brand-terracotta">Artikel</a>
+    <div class="flex items-center gap-6 text-sm font-semibold">
+      <a href="/about" class="text-brand-muted transition-colors hover:text-brand-terracotta">Tentang</a>
+      <a href="/articles" class="text-brand-muted transition-colors hover:text-brand-terracotta">Artikel</a>
       <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer"
-         class="rounded-full bg-brand-terracotta px-4 py-1.5 text-white hover:bg-brand-deep">Instagram</a>
+         class="text-brand-muted transition-colors hover:text-brand-terracotta">Instagram</a>
     </div>
   </nav>
 </header>

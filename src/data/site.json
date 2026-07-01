@@ -1,20 +1,20 @@
 {
-  "announcementText": "[Nama event] telah dibuka. Daftar sekarang.",
-  "tagline": "Komunitas pelajar Indonesia.",
+  "announcementText": "[Nama event] telah dibuka.",
+  "tagline": "Teman ngobrolmu soal kuliah dan beasiswa ke luar negeri.",
   "instagramUrl": "https://instagram.com/",
   "event": {
     "name": "[Nama Event]",
     "date": "[Tanggal]",
-    "description": "[Satu kalimat deskripsi event.]",
+    "description": "[Tulis satu kalimat soal event ini.]",
     "formUrl": "https://forms.gle/REPLACE-WITH-REAL-FORM",
     "posterImage": ""
   },
   "about": {
-    "text": "[Kalimat singkat tentang Teman Ngobrol.]",
+    "text": "Teman Ngobrol bantu pelajar Indonesia cari info kuliah dan beasiswa ke luar negeri, dari orang yang sudah menjalaninya.",
     "pillars": [
-      { "icon": "🎓", "title": "Info Kuliah LN", "text": "[Teks pilar pertama.]" },
-      { "icon": "💰", "title": "Panduan Beasiswa", "text": "[Teks pilar kedua.]" },
-      { "icon": "💬", "title": "Cerita dari Sesama", "text": "[Teks pilar ketiga.]" }
+      { "icon": "", "title": "Info kuliah luar negeri", "text": "Jurusan, kampus, dan jalur masuk, dijelaskan sederhana." },
+      { "icon": "", "title": "Panduan beasiswa", "text": "Langkah demi langkah beasiswa yang bisa kamu ikuti." },
+      { "icon": "", "title": "Cerita dari sesama", "text": "Pengalaman nyata dari mereka yang sudah berangkat." }
     ]
   }
 }

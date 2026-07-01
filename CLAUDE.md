@@ -60,11 +60,20 @@ Before feature work, confirm the live version with `npx astro --version` and che
 - The legacy `@astrojs/tailwind` integration is **Tailwind-3-only** — do not install it.
 - If you use `@apply` inside an Astro component `<style>` block, add
   `@reference "../styles/global.css"` to that block.
-- **Known gotcha (open):** `global.css` still includes the Astro starter's Bear Blog base
-  styles, notably `main { width: 720px }`, a gray `body` background gradient, and large
-  `h1`-`h6` sizes. These suit the article/prose pages but constrain the full-width homepage
-  (sections wrapped in `<main>` get pinned to 720px). Reconcile before treating the homepage
-  layout as done. See `docs/superpowers/notes/2026-06-30-homepage-known-issues.md`.
+- **Bear Blog base is wrapped in `@layer base`** (in `global.css`) so Tailwind utilities win.
+  This is deliberate and load-bearing: an *unlayered* element rule (e.g. `h1 { color }`) beats
+  layered utilities in Tailwind v4, so it would silently override `text-brand-*` on headings.
+  Keep base element styles inside `@layer base`. The article/about pages rely on these element
+  defaults (reading column via the global `main` rule, `h1`-`h6` sizes); the homepage overrides
+  them with utilities (`<main class="w-full max-w-none p-0">`, per-element text/size classes).
+- **Design system (homepage):** fonts are **Bricolage Grotesque** (display) + **Hanken Grotesk**
+  (body), self-hosted via the Astro fonts API (`--font-bricolage` / `--font-hanken`, exposed as
+  `--font-display` / `--font-body`). Warm palette tokens `brand-cream / ink / terracotta / ember /
+  clay / muted / peach` are tuned for WCAG AA (60-30-10: cream bg, terracotta structure, ember
+  CTA). Signature: the terracotta/ember period from the logo, used as an end-mark and list bullet.
+  Home sections live in `src/components/home/`. See
+  `docs/superpowers/notes/2026-06-30-homepage-known-issues.md` (Resolved) and the web-design
+  principles the redesign follows (type scale, spacing scale, de-slop checklist).
 
 ## Deployment — Cloudflare (static, no adapter)
 

@@ -2,26 +2,26 @@
 import site from '../data/site.json';
 const year = new Date().getFullYear();
 ---
-<footer class="bg-brand-footer text-orange-50 mt-16">
-  <div class="max-w-5xl mx-auto px-5 py-10 grid gap-8 sm:grid-cols-3">
+<footer class="bg-brand-clay text-brand-cream">
+  <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 sm:grid-cols-3">
     <div>
-      <p class="font-display font-extrabold text-xl text-brand-peach lowercase">teman ngobrol.</p>
-      <p class="mt-2 text-sm text-orange-200/80">{site.tagline}</p>
+      <p class="font-display text-xl font-extrabold lowercase">teman ngobrol<span class="text-brand-ember">.</span></p>
+      <p class="mt-2 max-w-xs text-sm text-brand-cream/75">{site.tagline}</p>
     </div>
-    <div class="text-sm">
-      <p class="font-bold mb-2">Tautan</p>
-      <ul class="space-y-1">
-        <li><a class="text-brand-peach hover:underline" href="/about">Tentang</a></li>
-        <li><a class="text-brand-peach hover:underline" href="/articles">Artikel</a></li>
-        <li><a class="text-brand-peach hover:underline" href="/daftar">Daftar event</a></li>
+    <nav class="text-sm">
+      <p class="mb-2 font-semibold">Tautan</p>
+      <ul class="space-y-1.5">
+        <li><a class="text-brand-cream/80 hover:text-brand-cream" href="/about">Tentang</a></li>
+        <li><a class="text-brand-cream/80 hover:text-brand-cream" href="/articles">Artikel</a></li>
+        <li><a class="text-brand-cream/80 hover:text-brand-cream" href="/daftar">Daftar event</a></li>
       </ul>
-    </div>
+    </nav>
     <div class="text-sm">
-      <p class="font-bold mb-2">Ikuti</p>
-      <a class="text-brand-peach hover:underline" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
+      <p class="mb-2 font-semibold">Ikuti</p>
+      <a class="text-brand-cream/80 hover:text-brand-cream" href={site.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
   </div>
-  <div class="border-t border-white/10 py-4 text-center text-xs text-orange-200/70">
+  <div class="border-t border-brand-cream/10 py-4 text-center text-xs text-brand-cream/60">
     &copy; {year} Teman Ngobrol
   </div>
 </footer>
